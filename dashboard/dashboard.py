@@ -55,11 +55,11 @@ with col2:
     total_registerd = monthly_df.registered.sum()
     total_casual = monthly_df.casual.sum()
     
-    st.metric("Total Registered", value= "{:,.0f}".format(total_registerd))
-    st.metric("Total Nonregistered", value= "{:,.0f}".format(total_casual)+" ")
+    st.metric("Total from registered", value= "{:,.0f}".format(total_registerd))
+    st.metric("Total from nonregistered", value= "{:,.0f}".format(total_casual)+" ")
 
 with col3:
-    labels = ('Registered', 'Other')
+    labels = ('Registered', 'Nonregistered')
     totals = (monthly_df.registered.sum(), monthly_df.casual.sum())
     colors = ('#93C572', '#FFF8DC')
     explode = (0, 0)
