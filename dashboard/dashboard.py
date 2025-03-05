@@ -15,7 +15,7 @@ def get_monthly_total_df(df):
     })
     return monthly_df
 
-all_df = pd.read_csv("./main_data.csv")
+all_df = pd.read_csv("https://github.com/adhicl/dicoding_analysis_project/blob/main/dashboard/main_data.csv")
 datetime_columns = ["dteday"]
 
 for column in datetime_columns:
