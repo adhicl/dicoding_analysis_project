@@ -75,8 +75,8 @@ with col3:
     st.pyplot(fig)
 
 fig, ax = plt.subplots()
-
-sns.histplot(data=monthly_df, x='dteday', weights='cnt', ax=ax, bins=15, kde=True)
+max_bin = monthly_df.count()
+sns.histplot(data=monthly_df, x='dteday', weights='cnt', ax=ax, bins=max_bin, kde=True)
 
 ax.set_ylabel(None)
 ax.set_xlabel("Date", fontsize=10)
